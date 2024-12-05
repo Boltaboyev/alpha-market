@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    transition: 0.2s;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-1;
+}
+
+.container2 {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+    .container2 {
+        max-width: 1300px;
+    }
+}
+
+#nav + div {
+    transition: .4s;
+}
+
+#nav:checked + div {
+    left: 0;
+}
+
+#nav:checked ~ .blur {
+    display: block;
+}

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha market</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <header class="max-[960px]:hidden">
+        <div class="container2 flex justify-between items-center border-b">
+            <select class="text-[14px] cursor-pointer outline-none py-[10px] hover:text-1">
+                <option>Санкт-Петербург</option>
+                <option>Москва</option>
+            </select>
+
+
+            <ul class="flex justify-center items-center gap-[20px]">
+                <li><a href="#!" class="hover:text-1">О нас</a></li>
+                <li><a href="#!" class="hover:text-1">Наши салоны</a></li>
+                <li><a href="#!" class="hover:text-1">Оплата и доставка</a></li>
+                <li><a href="#!" class="hover:text-1">Для бизнеса</a></li>
+            </ul>
+
+        </div>
+    </header>
+
+    <div class="py-[20px]">
+        <div class="container2 flex justify-between items-center">
+            <a href="./index.html"><img src="./assets/img/logo.png" alt=""></a>
+
+            <form class="w-[50%] overflow-hidden border h-[30px] flex justify-between items-center max-[960px]:hidden">
+                <input type="search" placeholder="Белый стул"
+                    class="w-[90%] h-full bg-[#f6f6f6] px-[13px] outline-none">
+                <button class="h-full w-[10%] bg-[#f6f6f6]"><i
+                        class="fa-solid fa-magnifying-glass outline-none"></i></button>
+            </form>
+
+            <a href="tel:8 800 700 40 24"
+                class="text-[20px] font-[400] leading-[120%] hover:text-1 max-[960px]:hidden">8 800 700 40 24</a>
+
+            <div class="flex justify-center items-center gap-[20px] max-[960px]:gap-[30px]">
+                <a href="#!" class="max-[450px]:hidden"><img src="./assets/svg/1.svg" alt=""></a>
+                <a href="#!" class="max-[450px]:hidden"><img src="./assets/svg/2.svg" alt=""></a>
+                <a href="#!" class="max-[450px]:hidden"><img src="./assets/svg/3.svg" alt=""></a>
+                <a href="#!" class="max-[450px]:hidden"><img src="./assets/svg/4.svg" alt=""></a>
+
+                <label for="nav" class="hidden max-[960px]:block text-[20px]">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+
+            <div
+                class="hidden justify-evenly items-center p-[15px] bg-1 w-full fixed bottom-0 left-0 z-[666] max-[450px]:flex">
+                <a href="#!" class=""><img src="./assets/svg/mobile/1.svg" alt=""></a>
+                <a href="#!" class=""><img src="./assets/svg/mobile/2.svg" alt=""></a>
+                <a href="#!" class=""><img src="./assets/svg/mobile/3.svg" alt=""></a>
+                <a href="#!" class=""><img src="./assets/svg/mobile/4.svg" alt=""></a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="max-[960px]:hidden">
+        <div class="container2">
+            <ul class="flex justify-start items-center gap-[20px] text-[14px] tracking-[0.02em] font-[400]">
+                <li><a href="#!" class="hover:text-1 underline">Каталог</a></li>
+                <li><a href="#!" class="hover:text-1 hover:underline">Каталог по комнатам</a></li>
+                <li><a href="#!" class="hover:text-1 hover:underline">Дизайн-проекты</a></li>
+                <li><a href="#!" class="hover:text-1 hover:underline">Мебель на заказ</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- nav -->
+    <input type="checkbox" id="nav" class="hidden">
+    <div
+        class="w-[70%] h-[100vh] bg-white z-[888] fixed top-0 left-[-100%] flex flex-col justify-center items-start p-[20px] max-[390px]:w-full">
+
+        <label for="nav" class="text-1 text-[20px] absolute right-[20px] top-[20px]">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+
+        <ul class="flex flex-col justify-start items-start gap-[10px] py-[10px]">
+            <li><a href="#!" class="hover:text-1">О нас</a></li>
+            <li><a href="#!" class="hover:text-1">Наши салоны</a></li>
+            <li><a href="#!" class="hover:text-1">Оплата и доставка</a></li>
+            <li><a href="#!" class="hover:text-1">Для бизнеса</a></li>
+        </ul>
+
+        <ul
+            class="flex flex-col w-full justify-start items-start gap-[10px] text-[14px] tracking-[0.02em] font-[400] py-[10px] border-t border-b">
+            <li><a href="#!" class="hover:text-1 ">Каталог</a></li>
+            <li><a href="#!" class="hover:text-1 ">Каталог по комнатам</a></li>
+            <li><a href="#!" class="hover:text-1 ">Дизайн-проекты</a></li>
+            <li><a href="#!" class="hover:text-1 ">Мебель на заказ</a></li>
+        </ul>
+
+        <a class="text-[20px] font-[400] leading-[120%] hover:text-1 py-[10px]">8 800 700 40 24</a>
+
+        <form
+            class="w-[50%] overflow-hidden border h-[30px] flex justify-between items-center my-[10px] max-[640px]:w-[80%] max-[410px]:w-full">
+            <input type="search" placeholder="Белый стул" class="w-[90%] h-full bg-[#f6f6f6] px-[13px] outline-none">
+            <button class="h-full w-[10%] bg-[#f6f6f6]"><i
+                    class="fa-solid fa-magnifying-glass outline-none"></i></button>
+        </form>
+
+    </div>
+
+    <label for="nav"
+        class="blur hidden h-[100vh] w-full bg-[#00000018] backdrop-blur-[5px] fixed top-0 left-0 z-[777]"></label>
+
+
+    <section class="showcase py-[20px]">
+        <div class="container2">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div
+                            class="w-full h-[500px] overflow-hidden  max-[1020px]:h-[400px] max-[680px]:h-[300px] max-[350px]:h-[250px]">
+                            <img src="./assets/img/showcase/1.png" alt="" class="w-full h-full">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div
+                            class="w-full h-[500px] overflow-hidden  max-[1020px]:h-[400px] max-[680px]:h-[300px] max-[350px]:h-[250px]">
+                            <img src="./assets/img/showcase/2.png" alt="" class="w-full h-full">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div
+                            class="w-full h-[500px] overflow-hidden  max-[1020px]:h-[400px] max-[680px]:h-[300px] max-[350px]:h-[250px]">
+                            <img src="./assets/img/showcase/3.png" alt="" class="w-full h-full">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div
+                            class="w-full h-[500px] overflow-hidden  max-[1020px]:h-[400px] max-[680px]:h-[300px] max-[350px]:h-[250px]">
+                            <img src="./assets/img/showcase/4.png" alt="" class="w-full h-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog py-[50px]">
+        <div class="container2 flex flex-col gap-[15px]">
+            <div class="flex justify-between items-center w-full font-[500] max-[485px]:hidden">
+                <a href="#!" class="hover:text-1">Каталог по комнатам</a>
+                <a href="#!" class="hover:text-1">Все комнаты</a>
+            </div>
+            <div class="grid grid-cols-3 gap-[15px] max-[660px]:grid-cols-2 max-[485px]:grid-cols-1">
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/catalog/1.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500]">
+                        <p class="group-hover:text-1">Ванная</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/catalog/2.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500]">
+                        <p class="group-hover:text-1">Прихожая</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/catalog/3.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500]">
+                        <p class="group-hover:text-1">Кухня</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog py-[50px]">
+        <div class="container2 flex flex-col gap-[15px]">
+            <div class="flex justify-between items-center w-full font-[500] max-[485px]:hidden">
+                <a href="#!" class="hover:text-1">Популярные категории</a>
+                <a href="#!" class="hover:text-1">Все комнаты</a>
+            </div>
+
+            <div class="grid grid-cols-6 gap-[15px] max-[950px]:grid-cols-3 max-[420px]:grid-cols-2">
+
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/popular/1.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500] flex justify-center items-center w-full">
+                        <p class="group-hover:text-1">Кресла</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/popular/2.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500] flex justify-center items-center w-full">
+                        <p class="group-hover:text-1">Столы</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/popular/3.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500] flex justify-center items-center w-full">
+                        <p class="group-hover:text-1">Декор</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/popular/1.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500] flex justify-center items-center w-full">
+                        <p class="group-hover:text-1">Стулья</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/popular/3.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500] flex justify-center items-center w-full">
+                        <p class="group-hover:text-1">Кресла</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/popular/2.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500] flex justify-center items-center w-full">
+                        <p class="group-hover:text-1">Стулья</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-[30px]">
+        <div
+            class="container2 bg-[#f6f6f6] banner p-[25px] flex justify-between items-center max-[920px]:flex-col max-[920px]:gap-[10px] max-[920px]:justify-center max-[920px]:text-center max-[350px]:hidden">
+            <h1 class="text-[#1a344d] text-[23px] font-[600] max-[380px]:text-[15px]">
+                Информационный блок про работу с бизнесом
+            </h1>
+
+            <a href="#!"
+                class="p-[5px_20px] border border-[#000] hover:border-1 active:scale-[.96] hover:bg-1 hover:text-white">Узнать
+                подробнее</a>
+        </div>
+    </section>
+
+
+    <section class="catalog py-[50px]">
+        <div class="container2 flex flex-col gap-[15px]">
+            <div class="flex justify-between  w-full items-center font-[500] max-[485px]:hidden">
+                <a href="#!" class="hover:text-1">Лучшее предложение</a>
+                <a href="#!" class="hover:text-1">Все комнаты</a>
+            </div>
+
+            <div
+                class="grid grid-cols-4 gap-[30px_25px] max-[1100px]:grid-cols-3 max-[825px]:grid-cols-2 max-[540px]:grid-cols-1">
+
+                <!-- 1 -->
+                <div class="flex flex-col">
+                    <div
+                        class="w-full h-[200px] overflow-hidden bg-[#f6f6f6] flex justify-center items-center relative">
+                        <img src="./assets/img/products/1.png" alt="" class="w-[70%] h-[70%] object-contain">
+
+                        <i
+                            class="fa-regular fa-heart absolute right-[10px] top-[10px] cursor-pointer hover:text-red-600"></i>
+                        <span
+                            class="p-[3px_5px] rounded-md bg-black text-white absolute top-[2px] left-[2px] text-[12px]">Распродажа</span>
+                    </div>
+
+                    <div class="flex flex-col p-[7px] gap-[6px] border">
+                        <p class="font-[600] leading-[140%]">Декоративный куст, с шикарными листьями, горшком</p>
+
+                        <p class="font-[600] opacity-50">2 000 руб.</p>
+
+                        <small>120 × 212 × 46</small>
+
+                        <div class="flex justify-between items-center">
+                            <div class="flex justify-center items-center gap-[4px]">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <div
+                                    class="flex justify-center items-center cursor-pointer w-[40px] h-[40px] border border-[#00000073] select-none">
+                                    +5
+                                </div>
+                            </div>
+
+                            <div
+                                class="h-[40px] w-[40px] flex justify-center items-center group active:scale-[.95] hover:bg-1 border border-1 cursor-pointer">
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.4406 17.2481L14.3453 5.05022C14.3154 4.7171 14.0363 4.46195 13.7018 4.46195H11.4431V3.44322C11.4431 1.54463 9.89855 0 8.00005 0C6.10163 0 4.55726 1.54463 4.55726 3.44322V4.46195H2.29696C1.96255 4.46195 1.68336 4.7171 1.65347 5.05022L0.553853 17.2961C0.537658 17.4769 0.59813 17.6559 0.720539 17.7898C0.842948 17.9237 1.01601 17.9999 1.19734 17.9999H14.8015C14.8021 17.9999 14.8028 17.9999 14.8033 17.9999C15.1602 17.9999 15.4493 17.7106 15.4493 17.3538C15.4493 17.3179 15.4463 17.2825 15.4406 17.2481ZM5.8494 3.44322C5.8494 2.25712 6.8142 1.29214 8.00013 1.29214C9.18615 1.29214 10.151 2.25712 10.151 3.44322V4.46195H5.8494V3.44322ZM1.90406 16.7079L2.88764 5.75409H4.55726V6.90944C4.55726 7.26624 4.84644 7.55551 5.20333 7.55551C5.56022 7.55551 5.8494 7.26624 5.8494 6.90944V5.75409H10.151V6.90944C10.151 7.26624 10.4402 7.55551 10.7971 7.55551C11.154 7.55551 11.4432 7.26624 11.4432 6.90944V5.75409H13.1113L14.0948 16.7079H1.90406Z"
+                                        fill="#000" class="group-hover:fill-white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="flex flex-col">
+                    <div
+                        class="w-full h-[200px] overflow-hidden bg-[#f6f6f6] flex justify-center items-center relative">
+                        <img src="./assets/img/products/2.png" alt="" class="w-[70%] h-[70%] object-contain">
+
+                        <i
+                            class="fa-regular fa-heart absolute right-[10px] top-[10px] cursor-pointer hover:text-red-600"></i>
+                        <span
+                            class="p-[3px_5px] rounded-md bg-black text-white absolute top-[2px] left-[2px] text-[12px]">Распродажа</span>
+                    </div>
+
+                    <div class="flex flex-col p-[7px] gap-[6px] border">
+                        <p class="font-[600] leading-[140%]">Декоративный куст, с шикарными листьями, горшком</p>
+
+                        <p class="font-[600] opacity-50">2 000 руб.</p>
+
+                        <small>120 × 212 × 46</small>
+
+                        <div class="flex justify-between items-center">
+                            <div class="flex justify-center items-center gap-[4px]">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <div
+                                    class="flex justify-center items-center cursor-pointer w-[40px] h-[40px] border border-[#00000073] select-none">
+                                    +5
+                                </div>
+                            </div>
+
+                            <div
+                                class="h-[40px] w-[40px] flex justify-center items-center group active:scale-[.95] hover:bg-1 border border-1 cursor-pointer">
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.4406 17.2481L14.3453 5.05022C14.3154 4.7171 14.0363 4.46195 13.7018 4.46195H11.4431V3.44322C11.4431 1.54463 9.89855 0 8.00005 0C6.10163 0 4.55726 1.54463 4.55726 3.44322V4.46195H2.29696C1.96255 4.46195 1.68336 4.7171 1.65347 5.05022L0.553853 17.2961C0.537658 17.4769 0.59813 17.6559 0.720539 17.7898C0.842948 17.9237 1.01601 17.9999 1.19734 17.9999H14.8015C14.8021 17.9999 14.8028 17.9999 14.8033 17.9999C15.1602 17.9999 15.4493 17.7106 15.4493 17.3538C15.4493 17.3179 15.4463 17.2825 15.4406 17.2481ZM5.8494 3.44322C5.8494 2.25712 6.8142 1.29214 8.00013 1.29214C9.18615 1.29214 10.151 2.25712 10.151 3.44322V4.46195H5.8494V3.44322ZM1.90406 16.7079L2.88764 5.75409H4.55726V6.90944C4.55726 7.26624 4.84644 7.55551 5.20333 7.55551C5.56022 7.55551 5.8494 7.26624 5.8494 6.90944V5.75409H10.151V6.90944C10.151 7.26624 10.4402 7.55551 10.7971 7.55551C11.154 7.55551 11.4432 7.26624 11.4432 6.90944V5.75409H13.1113L14.0948 16.7079H1.90406Z"
+                                        fill="#000" class="group-hover:fill-white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="flex flex-col">
+                    <div
+                        class="w-full h-[200px] overflow-hidden bg-[#f6f6f6] flex justify-center items-center relative">
+                        <img src="./assets/img/products/3.png" alt="" class="w-[70%] h-[70%] object-contain">
+
+                        <i
+                            class="fa-regular fa-heart absolute right-[10px] top-[10px] cursor-pointer hover:text-red-600"></i>
+                        <span
+                            class="p-[3px_5px] rounded-md bg-black text-white absolute top-[2px] left-[2px] text-[12px]">Распродажа</span>
+                    </div>
+
+                    <div class="flex flex-col p-[7px] gap-[6px] border">
+                        <p class="font-[600] leading-[140%]">Декоративный куст, с шикарными листьями, горшком</p>
+
+                        <p class="font-[600] opacity-50">2 000 руб.</p>
+
+                        <small>120 × 212 × 46</small>
+
+                        <div class="flex justify-between items-center">
+                            <div class="flex justify-center items-center gap-[4px]">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <div
+                                    class="flex justify-center items-center cursor-pointer w-[40px] h-[40px] border border-[#00000073] select-none">
+                                    +5
+                                </div>
+                            </div>
+
+                            <div
+                                class="h-[40px] w-[40px] flex justify-center items-center group active:scale-[.95] hover:bg-1 border border-1 cursor-pointer">
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.4406 17.2481L14.3453 5.05022C14.3154 4.7171 14.0363 4.46195 13.7018 4.46195H11.4431V3.44322C11.4431 1.54463 9.89855 0 8.00005 0C6.10163 0 4.55726 1.54463 4.55726 3.44322V4.46195H2.29696C1.96255 4.46195 1.68336 4.7171 1.65347 5.05022L0.553853 17.2961C0.537658 17.4769 0.59813 17.6559 0.720539 17.7898C0.842948 17.9237 1.01601 17.9999 1.19734 17.9999H14.8015C14.8021 17.9999 14.8028 17.9999 14.8033 17.9999C15.1602 17.9999 15.4493 17.7106 15.4493 17.3538C15.4493 17.3179 15.4463 17.2825 15.4406 17.2481ZM5.8494 3.44322C5.8494 2.25712 6.8142 1.29214 8.00013 1.29214C9.18615 1.29214 10.151 2.25712 10.151 3.44322V4.46195H5.8494V3.44322ZM1.90406 16.7079L2.88764 5.75409H4.55726V6.90944C4.55726 7.26624 4.84644 7.55551 5.20333 7.55551C5.56022 7.55551 5.8494 7.26624 5.8494 6.90944V5.75409H10.151V6.90944C10.151 7.26624 10.4402 7.55551 10.7971 7.55551C11.154 7.55551 11.4432 7.26624 11.4432 6.90944V5.75409H13.1113L14.0948 16.7079H1.90406Z"
+                                        fill="#000" class="group-hover:fill-white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="flex flex-col">
+                    <div
+                        class="w-full h-[200px] overflow-hidden bg-[#f6f6f6] flex justify-center items-center relative">
+                        <img src="./assets/img/products/4.png" alt="" class="w-[70%] h-[70%] object-contain">
+
+                        <i
+                            class="fa-regular fa-heart absolute right-[10px] top-[10px] cursor-pointer hover:text-red-600"></i>
+                        <span
+                            class="p-[3px_5px] rounded-md bg-black text-white absolute top-[2px] left-[2px] text-[12px]">Распродажа</span>
+                    </div>
+
+                    <div class="flex flex-col p-[7px] gap-[6px] border">
+                        <p class="font-[600] leading-[140%]">Декоративный куст, с шикарными листьями, горшком</p>
+
+                        <p class="font-[600] opacity-50">2 000 руб.</p>
+
+                        <small>120 × 212 × 46</small>
+
+                        <div class="flex justify-between items-center">
+                            <div class="flex justify-center items-center gap-[4px]">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <div
+                                    class="flex justify-center items-center cursor-pointer w-[40px] h-[40px] border border-[#00000073] select-none">
+                                    +5
+                                </div>
+                            </div>
+
+                            <div
+                                class="h-[40px] w-[40px] flex justify-center items-center group active:scale-[.95] hover:bg-1 border border-1 cursor-pointer">
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.4406 17.2481L14.3453 5.05022C14.3154 4.7171 14.0363 4.46195 13.7018 4.46195H11.4431V3.44322C11.4431 1.54463 9.89855 0 8.00005 0C6.10163 0 4.55726 1.54463 4.55726 3.44322V4.46195H2.29696C1.96255 4.46195 1.68336 4.7171 1.65347 5.05022L0.553853 17.2961C0.537658 17.4769 0.59813 17.6559 0.720539 17.7898C0.842948 17.9237 1.01601 17.9999 1.19734 17.9999H14.8015C14.8021 17.9999 14.8028 17.9999 14.8033 17.9999C15.1602 17.9999 15.4493 17.7106 15.4493 17.3538C15.4493 17.3179 15.4463 17.2825 15.4406 17.2481ZM5.8494 3.44322C5.8494 2.25712 6.8142 1.29214 8.00013 1.29214C9.18615 1.29214 10.151 2.25712 10.151 3.44322V4.46195H5.8494V3.44322ZM1.90406 16.7079L2.88764 5.75409H4.55726V6.90944C4.55726 7.26624 4.84644 7.55551 5.20333 7.55551C5.56022 7.55551 5.8494 7.26624 5.8494 6.90944V5.75409H10.151V6.90944C10.151 7.26624 10.4402 7.55551 10.7971 7.55551C11.154 7.55551 11.4432 7.26624 11.4432 6.90944V5.75409H13.1113L14.0948 16.7079H1.90406Z"
+                                        fill="#000" class="group-hover:fill-white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="flex flex-col">
+                    <div
+                        class="w-full h-[200px] overflow-hidden bg-[#f6f6f6] flex justify-center items-center relative">
+                        <img src="./assets/img/products/5.png" alt="" class="w-[70%] h-[70%] object-contain">
+
+                        <i
+                            class="fa-regular fa-heart absolute right-[10px] top-[10px] cursor-pointer hover:text-red-600"></i>
+                        <span
+                            class="p-[3px_5px] rounded-md bg-black text-white absolute top-[2px] left-[2px] text-[12px]">Распродажа</span>
+                    </div>
+
+                    <div class="flex flex-col p-[7px] gap-[6px] border">
+                        <p class="font-[600] leading-[140%]">Декоративный куст, с шикарными листьями, горшком</p>
+
+                        <p class="font-[600] opacity-50">2 000 руб.</p>
+
+                        <small>120 × 212 × 46</small>
+
+                        <div class="flex justify-between items-center">
+                            <div class="flex justify-center items-center gap-[4px]">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <div
+                                    class="flex justify-center items-center cursor-pointer w-[40px] h-[40px] border border-[#00000073] select-none">
+                                    +5
+                                </div>
+                            </div>
+
+                            <div
+                                class="h-[40px] w-[40px] flex justify-center items-center group active:scale-[.95] hover:bg-1 border border-1 cursor-pointer">
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.4406 17.2481L14.3453 5.05022C14.3154 4.7171 14.0363 4.46195 13.7018 4.46195H11.4431V3.44322C11.4431 1.54463 9.89855 0 8.00005 0C6.10163 0 4.55726 1.54463 4.55726 3.44322V4.46195H2.29696C1.96255 4.46195 1.68336 4.7171 1.65347 5.05022L0.553853 17.2961C0.537658 17.4769 0.59813 17.6559 0.720539 17.7898C0.842948 17.9237 1.01601 17.9999 1.19734 17.9999H14.8015C14.8021 17.9999 14.8028 17.9999 14.8033 17.9999C15.1602 17.9999 15.4493 17.7106 15.4493 17.3538C15.4493 17.3179 15.4463 17.2825 15.4406 17.2481ZM5.8494 3.44322C5.8494 2.25712 6.8142 1.29214 8.00013 1.29214C9.18615 1.29214 10.151 2.25712 10.151 3.44322V4.46195H5.8494V3.44322ZM1.90406 16.7079L2.88764 5.75409H4.55726V6.90944C4.55726 7.26624 4.84644 7.55551 5.20333 7.55551C5.56022 7.55551 5.8494 7.26624 5.8494 6.90944V5.75409H10.151V6.90944C10.151 7.26624 10.4402 7.55551 10.7971 7.55551C11.154 7.55551 11.4432 7.26624 11.4432 6.90944V5.75409H13.1113L14.0948 16.7079H1.90406Z"
+                                        fill="#000" class="group-hover:fill-white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 6 -->
+                <div class="flex flex-col">
+                    <div
+                        class="w-full h-[200px] overflow-hidden bg-[#f6f6f6] flex justify-center items-center relative">
+                        <img src="./assets/img/products/6.png" alt="" class="w-[70%] h-[70%] object-contain">
+
+                        <i
+                            class="fa-regular fa-heart absolute right-[10px] top-[10px] cursor-pointer hover:text-red-600"></i>
+                        <span
+                            class="p-[3px_5px] rounded-md bg-black text-white absolute top-[2px] left-[2px] text-[12px]">Распродажа</span>
+                    </div>
+
+                    <div class="flex flex-col p-[7px] gap-[6px] border">
+                        <p class="font-[600] leading-[140%]">Декоративный куст, с шикарными листьями, горшком</p>
+
+                        <p class="font-[600] opacity-50">2 000 руб.</p>
+
+                        <small>120 × 212 × 46</small>
+
+                        <div class="flex justify-between items-center">
+                            <div class="flex justify-center items-center gap-[4px]">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <div
+                                    class="flex justify-center items-center cursor-pointer w-[40px] h-[40px] border border-[#00000073] select-none">
+                                    +5
+                                </div>
+                            </div>
+
+                            <div
+                                class="h-[40px] w-[40px] flex justify-center items-center group active:scale-[.95] hover:bg-1 border border-1 cursor-pointer">
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.4406 17.2481L14.3453 5.05022C14.3154 4.7171 14.0363 4.46195 13.7018 4.46195H11.4431V3.44322C11.4431 1.54463 9.89855 0 8.00005 0C6.10163 0 4.55726 1.54463 4.55726 3.44322V4.46195H2.29696C1.96255 4.46195 1.68336 4.7171 1.65347 5.05022L0.553853 17.2961C0.537658 17.4769 0.59813 17.6559 0.720539 17.7898C0.842948 17.9237 1.01601 17.9999 1.19734 17.9999H14.8015C14.8021 17.9999 14.8028 17.9999 14.8033 17.9999C15.1602 17.9999 15.4493 17.7106 15.4493 17.3538C15.4493 17.3179 15.4463 17.2825 15.4406 17.2481ZM5.8494 3.44322C5.8494 2.25712 6.8142 1.29214 8.00013 1.29214C9.18615 1.29214 10.151 2.25712 10.151 3.44322V4.46195H5.8494V3.44322ZM1.90406 16.7079L2.88764 5.75409H4.55726V6.90944C4.55726 7.26624 4.84644 7.55551 5.20333 7.55551C5.56022 7.55551 5.8494 7.26624 5.8494 6.90944V5.75409H10.151V6.90944C10.151 7.26624 10.4402 7.55551 10.7971 7.55551C11.154 7.55551 11.4432 7.26624 11.4432 6.90944V5.75409H13.1113L14.0948 16.7079H1.90406Z"
+                                        fill="#000" class="group-hover:fill-white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 7 -->
+                <div class="flex flex-col">
+                    <div
+                        class="w-full h-[200px] overflow-hidden bg-[#f6f6f6] flex justify-center items-center relative">
+                        <img src="./assets/img/products/7.png" alt="" class="w-[70%] h-[70%] object-contain">
+
+                        <i
+                            class="fa-regular fa-heart absolute right-[10px] top-[10px] cursor-pointer hover:text-red-600"></i>
+                        <span
+                            class="p-[3px_5px] rounded-md bg-black text-white absolute top-[2px] left-[2px] text-[12px]">Распродажа</span>
+                    </div>
+
+                    <div class="flex flex-col p-[7px] gap-[6px] border">
+                        <p class="font-[600] leading-[140%]">Декоративный куст, с шикарными листьями, горшком</p>
+
+                        <p class="font-[600] opacity-50">2 000 руб.</p>
+
+                        <small>120 × 212 × 46</small>
+
+                        <div class="flex justify-between items-center">
+                            <div class="flex justify-center items-center gap-[4px]">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <div
+                                    class="flex justify-center items-center cursor-pointer w-[40px] h-[40px] border border-[#00000073] select-none">
+                                    +5
+                                </div>
+                            </div>
+
+                            <div
+                                class="h-[40px] w-[40px] flex justify-center items-center group active:scale-[.95] hover:bg-1 border border-1 cursor-pointer">
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.4406 17.2481L14.3453 5.05022C14.3154 4.7171 14.0363 4.46195 13.7018 4.46195H11.4431V3.44322C11.4431 1.54463 9.89855 0 8.00005 0C6.10163 0 4.55726 1.54463 4.55726 3.44322V4.46195H2.29696C1.96255 4.46195 1.68336 4.7171 1.65347 5.05022L0.553853 17.2961C0.537658 17.4769 0.59813 17.6559 0.720539 17.7898C0.842948 17.9237 1.01601 17.9999 1.19734 17.9999H14.8015C14.8021 17.9999 14.8028 17.9999 14.8033 17.9999C15.1602 17.9999 15.4493 17.7106 15.4493 17.3538C15.4493 17.3179 15.4463 17.2825 15.4406 17.2481ZM5.8494 3.44322C5.8494 2.25712 6.8142 1.29214 8.00013 1.29214C9.18615 1.29214 10.151 2.25712 10.151 3.44322V4.46195H5.8494V3.44322ZM1.90406 16.7079L2.88764 5.75409H4.55726V6.90944C4.55726 7.26624 4.84644 7.55551 5.20333 7.55551C5.56022 7.55551 5.8494 7.26624 5.8494 6.90944V5.75409H10.151V6.90944C10.151 7.26624 10.4402 7.55551 10.7971 7.55551C11.154 7.55551 11.4432 7.26624 11.4432 6.90944V5.75409H13.1113L14.0948 16.7079H1.90406Z"
+                                        fill="#000" class="group-hover:fill-white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 8 -->
+                <div class="flex flex-col">
+                    <div
+                        class="w-full h-[200px] overflow-hidden bg-[#f6f6f6] flex justify-center items-center relative">
+                        <img src="./assets/img/products/8.png" alt="" class="w-[70%] h-[70%] object-contain">
+
+                        <i
+                            class="fa-regular fa-heart absolute right-[10px] top-[10px] cursor-pointer hover:text-red-600"></i>
+                        <span
+                            class="p-[3px_5px] rounded-md bg-black text-white absolute top-[2px] left-[2px] text-[12px]">Распродажа</span>
+                    </div>
+
+                    <div class="flex flex-col p-[7px] gap-[6px] border">
+                        <p class="font-[600] leading-[140%]">Декоративный куст, с шикарными листьями, горшком</p>
+
+                        <p class="font-[600] opacity-50">2 000 руб.</p>
+
+                        <small>120 × 212 × 46</small>
+
+                        <div class="flex justify-between items-center">
+                            <div class="flex justify-center items-center gap-[4px]">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <img src="./assets/img/popular/3.png" alt="" class="h-[35px] w-[35px] cursor-pointer">
+                                <div
+                                    class="flex justify-center items-center cursor-pointer w-[40px] h-[40px] border border-[#00000073] select-none">
+                                    +5
+                                </div>
+                            </div>
+
+                            <div
+                                class="h-[40px] w-[40px] flex justify-center items-center group active:scale-[.95] hover:bg-1 border border-1 cursor-pointer">
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.4406 17.2481L14.3453 5.05022C14.3154 4.7171 14.0363 4.46195 13.7018 4.46195H11.4431V3.44322C11.4431 1.54463 9.89855 0 8.00005 0C6.10163 0 4.55726 1.54463 4.55726 3.44322V4.46195H2.29696C1.96255 4.46195 1.68336 4.7171 1.65347 5.05022L0.553853 17.2961C0.537658 17.4769 0.59813 17.6559 0.720539 17.7898C0.842948 17.9237 1.01601 17.9999 1.19734 17.9999H14.8015C14.8021 17.9999 14.8028 17.9999 14.8033 17.9999C15.1602 17.9999 15.4493 17.7106 15.4493 17.3538C15.4493 17.3179 15.4463 17.2825 15.4406 17.2481ZM5.8494 3.44322C5.8494 2.25712 6.8142 1.29214 8.00013 1.29214C9.18615 1.29214 10.151 2.25712 10.151 3.44322V4.46195H5.8494V3.44322ZM1.90406 16.7079L2.88764 5.75409H4.55726V6.90944C4.55726 7.26624 4.84644 7.55551 5.20333 7.55551C5.56022 7.55551 5.8494 7.26624 5.8494 6.90944V5.75409H10.151V6.90944C10.151 7.26624 10.4402 7.55551 10.7971 7.55551C11.154 7.55551 11.4432 7.26624 11.4432 6.90944V5.75409H13.1113L14.0948 16.7079H1.90406Z"
+                                        fill="#000" class="group-hover:fill-white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="catalog py-[50px]">
+        <div class="container2 flex flex-col gap-[15px]">
+            <div class="flex justify-between items-center w-full font-[500] max-[485px]:hidden">
+                <a href="#!" class="hover:text-1">Готовые коллекции</a>
+                <a href="#!" class="hover:text-1">Все комнаты</a>
+            </div>
+            <div class="grid grid-cols-3 gap-[15px] max-[660px]:grid-cols-2 max-[485px]:grid-cols-1">
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/collection/1.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500]">
+                        <p class="group-hover:text-1">Название коллекции</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/collection/2.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500]">
+                        <p class="group-hover:text-1">Название коллекции</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between items-start group cursor-pointer">
+                    <div class="w-full h-[90%] overflow-hidden">
+                        <img src="./assets/img/collection/3.png" alt=""
+                            class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-[.6s]">
+                    </div>
+                    <div class="font-[500]">
+                        <p class="group-hover:text-1">Название коллекции</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="grid-box">
+        <div class="container2">
+            <div class="grid grid-cols-2 gap-[15px] max-[1050px]:grid-cols-1">
+                <div class="flex flex-col justify-evenly items-start p-[20px] bg-[#f6f6f6] gap-[10px]">
+
+                    <h1 class="text-[30px] text-1 font-[500] leading-[120%] tracking-[0.01em] max-[400px]:text-[20px]">
+                        Раздел для десигна
+                        о дисигн проектах
+                        и дисигнераз</h1>
+
+                    <p class="max-[400px]:hidden">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+                        вэб-дизайне. Lorem Ipsum является
+                        стандартной "рыбой" для
+                        текстов на латинице с начала XVI века.</p>
+                </div>
+
+                <div
+                    class="grid grid-cols-3 gap-[15px] max-[1050px]:grid-cols-4 max-[850px]:grid-cols-3 max-[635px]:grid-cols-2 max-[455px]:grid-cols-1">
+                    <div class="flex flex-col justify-center items-center gap-[10px] bg-[#f6f6f6] p-[20px]">
+                        <img src="./assets/img/grid.png" alt="" class="w-[90%] max-[455px]:h-[50%] object-contain">
+
+                        <p class="font-[500]">Конструктор</p>
+                    </div>
+
+                    <div class="flex flex-col justify-center items-center gap-[10px] bg-[#f6f6f6] p-[20px]">
+                        <img src="./assets/img/grid.png" alt="" class="w-[90%] max-[455px]:h-[50%] object-contain">
+
+                        <p class="font-[500]">Дизайн-проекты</p>
+                    </div>
+
+                    <div class="flex flex-col justify-center items-center gap-[10px] bg-[#f6f6f6] p-[20px]">
+                        <img src="./assets/img/grid.png" alt="" class="w-[90%] max-[455px]:h-[50%] object-contain">
+
+                        <p class="font-[500]">Мебель на заказ</p>
+                    </div>
+
+                    <div class="flex flex-col justify-center items-center gap-[10px] bg-[#f6f6f6] p-[20px]">
+                        <img src="./assets/img/grid.png" alt="" class="w-[90%] max-[455px]:h-[50%] object-contain">
+
+                        <p class="font-[500]">Заказать дизайн</p>
+                    </div>
+
+                    <div
+                        class="flex flex-col justify-center items-center gap-[10px] bg-[#f6f6f6] p-[20px] max-[635px]:hidden">
+                        <img src="./assets/img/grid.png" alt="" class="w-[90%] max-[455px]:h-[50%] object-contain">
+
+                        <p class="font-[500]">Наши дизайнеры</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="pt-[80px] pb-[30px] max-[450px]:pb-[80px]">
+        <div class="container2">
+            <div
+                class="grid grid-cols-4 gap-[15px] border-t py-[25px] max-[910px]:grid-cols-2 max-[910px]:gap-[40px_15px] max-[480px]:grid-cols-1">
+                <ul class="flex flex-col justify-start items-start gap-[6px]">
+                    <h3 class="font-[600] mb-[4px]">Каталог</h3>
+                    <li><a href="#!" class="hover:text-1">Акции</a></li>
+                    <li><a href="#!" class="hover:text-1">Мебель</a></li>
+                    <li><a href="#!" class="hover:text-1">Список комнат</a></li>
+                    <li><a href="#!" class="hover:text-1">Товары для дома</a></li>
+                    <li><a href="#!" class="hover:text-1">Фурнитура и комплекти</a></li>
+                </ul>
+
+                <ul class="flex flex-col justify-start items-start gap-[6px]">
+                    <h3 class="font-[600] mb-[4px]">Покупателю</h3>
+                    <li><a href="#!" class="hover:text-1">Мебель на заказ</a></li>
+                    <li><a href="#!" class="hover:text-1">Дизайн-проекты</a></li>
+                    <li><a href="#!" class="hover:text-1">Наши салоны</a></li>
+                    <li><a href="#!" class="hover:text-1">Оплата и доставка</a></li>
+                    <li><a href="#!" class="hover:text-1">Для бизнеса</a></li>
+                </ul>
+
+
+                <div class="flex flex-col justify-start items-start gap-[6px]">
+                    <h3 class="font-[600] mb-[4px]">Контакты</h3>
+                    <small>Единая справочная:</small>
+                    <a href="tel:8 800 700 40 24">8 800 700 40 24</a>
+                    <small>
+                        Звонок по России бесплатный <br> с 02:00 до 23:00
+                    </small>
+                    <div class="flex justify-start items-center gap-[10px]">
+                        <img src="./assets/svg/youtube.svg" alt="" class="cursor-pointer">
+                        <img src="./assets/svg/instagram.svg" alt="" class="cursor-pointer">
+                    </div>
+                </div>
+
+
+                <div class="flex flex-col justify-between items-start gap-[6px]">
+                    <div>
+                        <h3 class="font-[600] mb-[4px]">Мы принимаем к оплате</h3>
+                        <img src="./assets/img/payment.png" alt="" class="cursor-pointer">
+                    </div>
+
+                    <div class="flex flex-col justify-start items-start gap-[4px]">
+                        <p>Нам важно ваше мнение</p>
+                        <a href="#!" class="p-[3px_10px] border border-black w-full text-center">Написать нам</a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="flex justify-between items-center border-t py-[15px] text-[14px] max-[290px]:text-[13px] max-[830px]:flex-col max-[830px]:gap-[10px]">
+                <div class="flex justify-start items-center gap-[60px] max-[830px]:flex-col max-[830px]:gap-[10px]">
+                    <p class="opacity-60">© 2020 Rendement. All rights reserved</p>
+                    <a href="#!" class="hover:underline">Политика конфиденциальности</a>
+                </div>
+                <a href="!#" class="hover:text-1">Developed by Legacystudio</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    </script>
+</body>
+
+</html>
